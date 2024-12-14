@@ -1,0 +1,8 @@
+:root {
+  --img-bg: url("./images/bg-desktop-light.jpg");
+  --body-bg: hsl(0, 0%, 98%);
+  --text-color: hsl(235, 19%, 35%);
+  --card-bg: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(236, 33%, 92%);
+  --placeholder-color: hsl(233, 11%, 84%);
+}
