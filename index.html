@@ -15,5 +15,70 @@
     <link id="theme-style" rel="stylesheet" type="text/css" href="" />
     <script src="./src/main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>TODO</h1>
+      <button class="dark-theme" id="dark-theme-btn">
+        <img src="./images/icon-moon.svg" />
+      </button>
+      <button class="light-theme" id="light-theme-btn">
+        <img src="./images/icon-sun.svg" />
+      </button>
+    </header>
+
+    <main>
+      <div class="card add">
+        <div>
+          <button id="add-btn">
+            <i class="fas fa-plus" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div class="text-container">
+        <input
+          type="text"
+          placeholder="Create a new todo...."
+          spellcheck="false"
+          autocomplete="off"
+        />
+      </div>
+
+      <ul class="todos">
+        <li class="card todo-item">
+          <div class="todo">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox"></label>
+            <p>one</p>
+          </div>
+          <div class="icons">
+            <i class="fa fa-pencil"></i>
+            <i class="fa fa-times"></i>
+          </div>
+        </li>
+      </ul>
+
+      <div class="card stats">
+        <p><span id="items-left">0 </span>items left</p>
+
+        <div class="filter">
+          <button class="active" id="all">All</button>
+          <button id="m-active">Active</button>
+          <button id="m-completed">Completed</button>
+        </div>
+        <div class="corner">
+          <button id="clear">Clear Completed</button>
+        </div>
+      </div>
+
+      <div class="card m-filter">
+        <button id="m-all" class="active">All</button>
+        <button id="m-active">Active</button>
+        <button id="m-compeleted">Completed</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Drag and drop to reorder list</p>
+    </footer>
+  </body>
 </html>

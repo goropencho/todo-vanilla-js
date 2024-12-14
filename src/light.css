@@ -6,3 +6,11 @@
   --very-light-grayish-blue: hsl(236, 33%, 92%);
   --placeholder-color: hsl(233, 11%, 84%);
 }
+
+header .dark-theme {
+  display: block;
+}
+
+header .ligh-theme {
+  display: none;
+}

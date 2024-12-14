@@ -46,3 +46,213 @@ body {
 body * {
   transition: 0.3s;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: var(--white);
+  letter-spacing: 1.3rem;
+  font-weight: var(--fw-bold);
+  font-size: 36px;
+}
+
+header .dark-theme {
+  display: none;
+}
+
+.card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  align-items: flex-start;
+  height: 3.5rem;
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--placeholder-color);
+}
+
+input,
+button {
+  font: inherit;
+  border: 0;
+  background: transparent;
+  color: var(--text-color);
+}
+
+input:focus,
+button:focus {
+  outline: 0;
+}
+
+.add {
+  margin: 1rem 0;
+  border-radius: 0.3rem;
+}
+
+.add button {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--placeholder-color);
+  cursor: pointer;
+}
+
+.add button i {
+  display: none;
+}
+
+.add button:hover i {
+  display: block;
+}
+
+.txt-container {
+  flex: 1;
+}
+
+.txt-container input {
+  width: 100%;
+  font-size: 18px;
+}
+
+.txt-container input::placeholder {
+  color: var(--placeholder-color);
+}
+
+ul {
+  list-style: none;
+}
+
+.todo-item {
+  justify-content: space-between;
+}
+
+.todo,
+.icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.fa {
+  margin-top: 0.3rem;
+  cursor: pointer;
+  color: var(--placeholder-color);
+}
+
+.fa:hover {
+  color: var(--very-light-grayish-blue);
+}
+
+.fa-pencil {
+  font-size: 14px;
+}
+
+.todo-item:hover .fa {
+  display: block;
+}
+
+.todos .card:first-child {
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] ~ label {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--placeholder-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="checkbox"] ~ label:hover {
+  border: 1px solid var(--purple-pink);
+}
+
+input[type="checkbox"]:checked ~ label {
+  background: url("../images/icon-check.svg"),
+    linear-gradient(135deg, var(--bright-green) 0, var(--purple-pink));
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input[type="checkbox"]:checked ~ p {
+  text-decoration: line-through;
+  color: var(--placeholder-color);
+}
+
+.todos,
+.stats,
+.m-filter {
+  box-shadow: 0 2rem 3rem -0.5rem var(--box-shadow);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  height: 3rem;
+  color: var(--placeholder-color);
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.m-filter {
+  display: flex;
+  justify-content: center;
+  height: 3rem;
+  font-size: 14px;
+  font-weight: var(--fw-bold);
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+}
+
+.stats button,
+.m-filter button {
+  color: var(--placeholder-color);
+  cursor: pointer;
+}
+
+.stats button:hover,
+.m-filter button:hover {
+  color: var(--text-color);
+}
+
+.stats .active,
+.m-filter .active {
+  color: var(--bright-blue) !important;
+}
+
+.filter {
+  display: none;
+  font-weight: var(--fw-bold);
+}
+
+footer {
+  margin: 3rem 0;
+  text-align: center;
+  color: var(--placeholder-color);
+  font-size: 14px;
+}
+
+@media (min-width: 480px) {
+  .m-filter {
+    display: none;
+  }
+
+  .filter {
+    display: block;
+  }
+
+  .fa {
+    display: none;
+  }
+}
