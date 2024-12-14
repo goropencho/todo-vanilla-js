@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo Interactive</title>
     <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
       integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
@@ -13,16 +19,15 @@
     />
     <link rel="stylesheet" type="text/css" href="./src/style.css" />
     <link id="theme-style" rel="stylesheet" type="text/css" href="" />
-    <script src="./src/main.js"></script>
   </head>
   <body>
     <header>
       <h1>TODO</h1>
       <button class="dark-theme" id="dark-theme-btn">
-        <img src="./images/icon-moon.svg" />
+        <img src="./images/icon-moon.svg" alt="Change theme color" />
       </button>
       <button class="light-theme" id="light-theme-btn">
-        <img src="./images/icon-sun.svg" />
+        <img src="./images/icon-sun.svg" alt="Change theme color" />
       </button>
     </header>
 
@@ -33,37 +38,25 @@
             <i class="fas fa-plus" aria-hidden="true"></i>
           </button>
         </div>
-      </div>
-      <div class="text-container">
-        <input
-          type="text"
-          placeholder="Create a new todo...."
-          spellcheck="false"
-          autocomplete="off"
-        />
+        <div class="text-container">
+          <input
+            type="text"
+            placeholder="Create a new todo...."
+            spellcheck="false"
+            autocomplete="off"
+          />
+        </div>
       </div>
 
-      <ul class="todos">
-        <li class="card todo-item">
-          <div class="todo">
-            <input type="checkbox" id="checkbox" />
-            <label for="checkbox"></label>
-            <p>one</p>
-          </div>
-          <div class="icons">
-            <i class="fa fa-pencil"></i>
-            <i class="fa fa-times"></i>
-          </div>
-        </li>
-      </ul>
+      <ul class="todos"></ul>
 
       <div class="card stats">
         <p><span id="items-left">0 </span>items left</p>
 
         <div class="filter">
           <button class="active" id="all">All</button>
-          <button id="m-active">Active</button>
-          <button id="m-completed">Completed</button>
+          <button id="active">Active</button>
+          <button id="completed">Completed</button>
         </div>
         <div class="corner">
           <button id="clear">Clear Completed</button>
@@ -73,12 +66,15 @@
       <div class="card m-filter">
         <button id="m-all" class="active">All</button>
         <button id="m-active">Active</button>
-        <button id="m-compeleted">Completed</button>
+        <button id="m-completed">Completed</button>
       </div>
     </main>
 
     <footer>
       <p>Drag and drop to reorder list</p>
     </footer>
+
+    <script src="./src/main.js"></script>
+    <script src="./src/toggleTheme.js"></script>
   </body>
 </html>
